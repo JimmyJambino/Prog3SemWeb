@@ -66,10 +66,6 @@ window.addEventListener("load", async () => {
                     evt.preventDefault()
                     addKandidat()
                 }
-            },
-            "/edit": () => {
-                renderTemplate(templateEdit, "content")
-                fetchPartierToOptions()
             }
         })
         .notFound(() => renderText("No page for this route found", "content"))
