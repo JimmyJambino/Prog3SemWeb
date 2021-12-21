@@ -1,18 +1,6 @@
 
 const URL = "http://localhost:9000/kandidat/"
 
-/*
-export function fetchKandidater() {
-    console.log("Start")
-    fetch(URL)
-        .then(res => res.json())
-        .then(match => {
-            console.log(match)
-        })
-}
-
- */
-
 function order(a, b) {
     return a.partiNavn < b.partiNavn ? -1 : (a.partiNavn > b.partiNavn ? 1 : 0)
 }

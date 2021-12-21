@@ -1,3 +1,5 @@
+// Alt herinde er taget fra Larses undervisning. https://github.com/plaul/navigo-tutorial
+
 /**
  * Appends the provided template to the node with the id contentId
  * @param {template} template
@@ -53,7 +55,7 @@ export async function loadTemplate(page) {
  */
 export function adjustForMissingHash() {
     let path = window.location.hash
-    if (path == "") { //Do this only for hash
+    if (path == "") {
         path = "#/"
         window.history.pushState({}, path, window.location.href + path);
     }
@@ -70,7 +72,6 @@ export function setActiveLink(topnav, activeUrl) {
     const links = document.getElementById(topnav).querySelectorAll("a");
     links.forEach(child => {
         child.classList.remove("active")
-        //remove leading '/' if any
         if (child.getAttribute("href").replace(/\//, "") === activeUrl) {
             child.classList.add("active")
         }

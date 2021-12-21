@@ -24,7 +24,7 @@ window.addEventListener("load", async () => {
     adjustForMissingHash()
     router
         .hooks({
-            before(done, match) { // why dafuq is this unused??
+            before(done, match) {
                 setActiveLink("topnav", match.url)
                 done()
             }
@@ -32,7 +32,6 @@ window.addEventListener("load", async () => {
         .on({
             "/": () => {
                 renderTemplate(templateHome, "content")
-                //fetchKandidater();
             },
             "/partier": () => {
                 renderTemplate(templatePartier, "content")
@@ -68,7 +67,7 @@ window.addEventListener("load", async () => {
                     addKandidat()
                 }
             },
-            "/edit": () => { // In case they want to edit it from this menu instead.. TODO: REMOVE?
+            "/edit": () => {
                 renderTemplate(templateEdit, "content")
                 fetchPartierToOptions()
             }

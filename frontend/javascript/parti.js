@@ -15,10 +15,8 @@ export function fetchPartierAndSort() {
     let total = 0;
     fetch(URL).then(res => res.json())
         .then(data => {
-            // let total = 0;
             data.map(count => {
                 count.kandidatSet.forEach(a => total += a.antalStemmer)
-                //total;
             })
             return data;
         })
